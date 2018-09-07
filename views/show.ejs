@@ -1,0 +1,18 @@
+<% include partials/header %>
+ <div class="container">
+
+<h4><%= location.name %></h4>
+
+<img class="responsive-img" src="<%= location.image %>">
+<p><%= location.description %></p> 
+<a class="waves-effect waves-light btn orange" href="/locations/<%= location._id %>/edit"><i class="material-icons right">edit</i>Edit This Location</a>
+<br />
+<form action="/locations/<%= location._id %>?_method=DELETE" method="POST">
+  <button class="btn waves-effect waves-light red" type="submit">DELETE This Location
+    <i class="material-icons right">delete</i>
+  </button>
+</form>
+
+<!-- /container -->
+</div>
+<% include partials/footer %>

@@ -1,0 +1,36 @@
+<% include partials/header %>
+
+<div class="container">
+    
+    <h1>Locations</h1>
+    
+    <a class="waves-effect waves-red red darken-3 btn" href="/locations/new">Add New Location</a>
+    
+    <p>All of the locations we currently serve.</p>
+    
+    <div class="row">
+        <% locations.forEach(function(location){ %>
+            <div class="col s12 m6 l4">
+                <div class="card small">
+                    <div class="card-image">
+                        <img src="<%= location.image %>">
+                        <span class="card-title red"><%= location.name %></span>
+                    </div>
+                    <div class="card-content">
+                        <p><%= location.description %></p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/locations/<%= location._id %>">View Destination
+                        <span class="right"><strong>$<%= location.price %></strong></span></a>
+                    </div>
+                </div>
+            </div>
+         <% }); %>
+    </div>
+
+<a href="/locations">View all locations</a>
+
+<!-- /container -->
+</div>
+
+<% include partials/footer %>

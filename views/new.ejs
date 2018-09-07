@@ -1,0 +1,48 @@
+<% include partials/header %>
+
+<div class="container">
+
+    <h3>Add a New Location</h3>
+    
+    <p>Click here to ask for help.</p>
+    
+    <!--<form action="/locations" method="POST">-->
+    <!--    <input type="text" name="location[name]" placeholder="location name">-->
+    <!--    <input type="text" name="location[description]" placeholder="location description">-->
+    <!--    <input type="text" name="location[image]" placeholder="image url">-->
+    <!--    <input type="number"step=".01" name="location[price]" placeholder="0.00">-->
+    <!--    <button>Submit</button>-->
+    <!--</form>-->
+    
+    <div class="col s12 m3">
+        <form action="/locations" method="POST">
+              <div class="card-panel grey lighten-4">
+                <div class="input-field">
+                  <input type="text" placeholder="Location Name" id="location-name" name="location[name]">
+                  <label for="location-name">Location Name</label>
+                </div>
+                <div class="input-field">
+                  <input type="text" placeholder="Phone" id="location-image" name="location[image]">
+                  <label for="location-image">Image URL</label>
+                </div>
+                <div class="input-field">
+                  <input type="number"step=".01" name="location[price]" placeholder="0.00" id="location-price">
+                  <label for="location-price">Email</label>
+                </div>
+                <div class="input-field">
+                  <textarea class="materialize-textarea" placeholder="Enter Description" id="location-description" name="location[description]"></textarea>
+                  <label for="location-description">Message</label>
+                </div>
+                <button class="btn waves-effect waves-light right submit-right" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+              </div>
+          </form>
+        </div>
+
+<p class><a href="/locations">View all locations</a></p>
+
+<!-- /container -->
+</div>
+
+<% include partials/footer %>
